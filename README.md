@@ -15,6 +15,7 @@ Clone the repository and install the required dependencies to set up the project
 
 
 git clone https://github.com/lkasym/deepfake_project
+
 pip install -r requirements.txt
 
 
