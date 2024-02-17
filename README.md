@@ -39,4 +39,4 @@ We welcome contributions from the community. Feel free to fork the repository, m
 This project is released under the MIT License. See the LICENSE file for more details.
 
 
-Please replace `<repository-link>`, `<repository-directory>`, and `<script-name>.py` with the actual details of your project. This version aims to convey the project's essence and invite engagement in a straightforward and professional manner.
+
