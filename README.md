@@ -35,8 +35,7 @@ The model was trained with a focus on achieving a balanced representation of cla
 ## Contributing
 We welcome contributions from the community. Feel free to fork the repository, make improvements, and submit a pull request with your changes.
 
-## License
-This project is released under the MIT License. See the LICENSE file for more details.
+
 
 
 
