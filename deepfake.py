@@ -22,23 +22,21 @@ def extract_frames(video_path, label, max_frames=10):
     return video_frames
 
 def load_data(paths, label):
-    start_time = time.time()
     data = []
+    start_time = time.time()
     for path in paths:
-        print(f"Processing path: {path}")
-        for video in os.listdir(path):
-            video_path = os.path.join(path, video)
-            data.extend(extract_frames(video_path, label))
+        if os.path.isdir(path):
+            for video in os.listdir(path):
+                video_path = os.path.join(path, video)
+                data.extend(extract_frames(video_path, label))
+        elif os.path.isfile(path):
+            data.extend(extract_frames(path, label))
     end_time = time.time()
     print(f"Loaded data from {paths}. Time taken: {end_time - start_time:.2f} seconds")
     return data
 # Paths to your datasets
-real_paths = ["C:\\Users\\laksh\\Downloads\\Celeb-DF\\Celeb-real", 
-              "C:\\Users\\laksh\\Downloads\\Celeb-DF\\YouTube-real",
-              "C:\\Users\\laksh\\Downloads\\Celeb-DF-v2\\Celeb-real",
-              "C:\\Users\\laksh\\Downloads\\Celeb-DF-v2\\YouTube-real"]
-synthetic_paths = ["C:\\Users\\laksh\\Downloads\\Celeb-DF-v2\\Celeb-synthesis",
-                   "C:\\Users\\laksh\\Downloads\\Celeb-DF\\Celeb-synthesis"]
+real_paths = ["C:\\Users\\PC\\Desktop\\deepfake_project\\dataset\\Zara-Patel-Original-Video.mp4"]
+synthetic_paths = ["C:\\Users\\PC\\Desktop\\deepfake_project\\dataset\\Rashmika-Mandanna-Fake-Video.mp4"]
 
 # Load and label data
 real_data = load_data(real_paths, 0) # 0 for real

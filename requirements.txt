@@ -1,5 +1,4 @@
-Python 3.x
-OpenCV
-NumPy
-TensorFlow 2.x
+opencv-python
+numpy
+tensorflow>=2.0
 scikit-learn
